@@ -1,0 +1,62 @@
+{
+  "title": "Create a New Question",
+  "description": "You may create your own question using this action. It takes a JSON\nobject containing a question and a collection of answers in the\nform of choices.",
+  "permalink": "t~questions~collection~post~questions",
+  "uuid": "_ykXHftbVKRAkJsfuvWvw",
+  "method": "POST",
+  "path": "/questions",
+  "pathTemplate": "/questions",
+  "parameters": [],
+  "meta": {
+    "resource": {
+      "title": "Questions Collection",
+      "permalink": "r~questions~collection"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "POST",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n    \"question\": \"Favourite programming language?\",\n    \"choices\": [\n        \"Swift\",\n        \"Python\",\n        \"Objective-C\",\n        \"Ruby\"\n    ]\n}\n"
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "201",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Location",
+            "example": "/questions/2",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "{\n    \"question\": \"Favourite programming language?\",\n    \"published_at\": \"2015-08-05T08:40:51.620Z\",\n    \"choices\": [\n        {\n            \"choice\": \"Swift\",\n            \"votes\": 0\n        }, {\n            \"choice\": \"Python\",\n            \"votes\": 0\n        }, {\n            \"choice\": \"Objective-C\",\n            \"votes\": 0\n        }, {\n            \"choice\": \"Ruby\",\n            \"votes\": 0\n        }\n    ]\n}\n"
+      }
+    }
+  ]
+}

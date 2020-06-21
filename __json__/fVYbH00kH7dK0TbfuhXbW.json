@@ -1,0 +1,43 @@
+{
+  "title": "List All Questions",
+  "description": "",
+  "permalink": "t~questions~collection~get~questions",
+  "uuid": "fVYbH00kH7dK0TbfuhXbW",
+  "method": "GET",
+  "path": "/questions",
+  "pathTemplate": "/questions",
+  "parameters": [],
+  "meta": {
+    "resource": {
+      "title": "Questions Collection",
+      "permalink": "r~questions~collection"
+    }
+  },
+  "transactions": [
+    {
+      "request": {
+        "title": "",
+        "description": "",
+        "method": "GET",
+        "headers": []
+      },
+      "response": {
+        "title": "",
+        "description": "",
+        "statusCode": "200",
+        "contentType": "application/json",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "example": "application/json",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "body": "[\n    {\n        \"question\": \"Favourite programming language?\",\n        \"published_at\": \"2015-08-05T08:40:51.620Z\",\n        \"choices\": [\n            {\n                \"choice\": \"TT\",\n                \"votes\": 2048\n            }, {\n                \"choice\": \"Python\",\n                \"votes\": 1024\n            }, {\n                \"choice\": \"Objective-C\",\n                \"votes\": 512\n            }, {\n                \"choice\": \"Ruby\",\n                \"votes\": 256\n            }\n        ]\n    }\n]\n"
+      }
+    }
+  ]
+}
