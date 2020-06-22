@@ -14,7 +14,7 @@ export default function({ title, groups, resources, descriptionToc }) {
     title,
     groups,
     resources,
-    toc: descriptionToc
+    toc: descriptionToc,
   });
   return <FilteredNavigation items={items} />;
 }
@@ -23,7 +23,7 @@ function mapItem(item) {
   return {
     title: item.title,
     itemId: toHref(item.permalink),
-    subNav: item.children.map(subitem => mapItem(subitem))
+    subNav: item.children.map((subitem) => mapItem(subitem)),
   };
 }
 
@@ -44,17 +44,17 @@ function FilteredNavigation({ items }) {
           event.preventDefault();
           navigation.navigate(item.itemId);
         }}
-        mapItem={item => mapItem(item)}
+        mapItem={(item) => mapItem(item)}
         overrides={{
           NavItem: {
             style: ({ $active, $theme }) => {
               return {
                 overflow: "hidden",
                 whiteSpace: "nowrap",
-                textOverflow: "ellipsis"
+                textOverflow: "ellipsis",
               };
-            }
-          }
+            },
+          },
         }}
       />
     </Block>
